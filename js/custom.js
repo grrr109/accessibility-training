@@ -37,22 +37,39 @@ function toggleTab(selectedNav, targetId) {
   });
 }
 
-document.querySelector('.toggle-skip-nav').onclick = function() {
-  this.parentNode.classList.add('is-active');
-  document.querySelector('.skip-nav-dropdown a').focus();
-};
+// document.querySelector('.toggle-skip-nav').onclick = function() {
+//   this.parentNode.classList.add('is-active');
+//   document.querySelector('.skip-nav-dropdown a').focus();
+//   document.querySelectorAll('.skip-nav-dropdown a').forEach(item => item.setAttribute('tabindex', -1));
+// };
 
-document.querySelector('.skip-nav-dropdown').addEventListener('focusout', function(event) {
-  document.querySelector('.skip-nav').classList.remove('is-active');
-});
+// document.querySelector('.skip-nav-dropdown').addEventListener('focusout', function(event) {
+//   document.querySelector('.skip-nav').classList.remove('is-active');
+// });
 
-document.querySelector('.skip-nav-dropdown').addEventListener('keydown', function(event) {
-  switch (event.keyCode) {
-    case 40:
-      console.log('down');
-      break;
-    case 38:
-      console.log('up');
-      break;
-  }
-});
+// document.querySelector('.skip-nav-dropdown').addEventListener('keydown', function(event) {
+//   switch (event.keyCode) {
+//     case 40:
+//       console.log('down');
+//       break;
+//     case 38:
+//       console.log('up');
+//       break;
+//   }
+// });
+
+(function() {
+  var notifyButton = document.getElementById('notify-button'),
+    liveArea = document.getElementById('live-area'),
+    messages = ['Oh my God! Notify button color has changed!', "I can't believe it! Button color is changed again!"],
+    index = 0;
+  if (!notifyButton || !liveArea) return;
+  setInterval(function() {
+    var r = Math.floor(Math.random() * 256),
+      g = Math.floor(Math.random() * 256),
+      b = Math.floor(Math.random() * 256);
+    notifyButton.style.backgroundColor = '#' + r.toString(16) + g.toString(16) + b.toString(16);
+    liveArea.innerText = messages[index];
+    index = +!index;
+  }, 60000);
+})();
