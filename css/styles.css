@@ -240,19 +240,19 @@ fieldset {
   border-radius: 4px 4px 0 0;
 }
 
-.hero.is-info .tabs li.is-active button {
+.hero.is-info .tabs button[aria-selected='true'] {
   opacity: 1;
 }
 
-.hero.is-info .tabs.is-boxed li.is-active button {
+.hero.is-info .tabs.is-boxed button[aria-selected='true'] {
   background-color: #fff;
   border-color: #fff;
 }
 
-.hero.is-info .tabs.is-boxed li.is-active button,
-.hero.is-info .tabs.is-boxed li.is-active button:hover,
-.hero.is-info .tabs.is-toggle li.is-active button,
-.hero.is-info .tabs.is-toggle li.is-active button:hover {
+.hero.is-info .tabs.is-boxed button[aria-selected='true'],
+.hero.is-info .tabs.is-boxed button[aria-selected='true']:hover,
+.hero.is-info .tabs.is-toggle button[aria-selected='true'],
+.hero.is-info .tabs.is-toggle button[aria-selected='true']:hover {
   color: #08588c;
 }
 
@@ -456,4 +456,12 @@ iframe {
 .navbar-burger {
   color: #ffffff;
   background: transparent;
+}
+
+.tabs-wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
 }

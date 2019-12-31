@@ -291,31 +291,25 @@
           </div>
         </div>
         <div class="tabs is-boxed is-centered main-menu" id="nav" role="tablist">
-          <ul>
-            <li data-target="pane-1" id="1" class="is-active" role="tab" aria-selected="true">
-              <button>
-                <span class="icon is-small"><span aria-hidden="true" class="fa fa-image"></span></span>
-                <span>Pictures</span>
-              </button>
-            </li>
-            <li data-target="pane-3" id="3" role="tab">
-              <button>
-                <span class="icon is-small"><span aria-hidden="true" class="fab fa-superpowers"></span></span>
-                <span>Team</span>
-              </button>
-            </li>
-            <li data-target="pane-4" id="4" role="tab">
-              <button>
-                <span class="icon is-small"><span aria-hidden="true" class="fa fa-film"></span></span>
-                <span>Video</span>
-              </button>
-            </li>
-          </ul>
+          <div class="tabs-wrapper">
+            <button id="1" role="tab" aria-selected="true" aria-controls="pane-1">
+              <span class="icon is-small"><span aria-hidden="true" class="fa fa-image"></span></span>
+              <span>Pictures</span>
+            </button>
+            <button id="3" role="tab" tabindex="-1" aria-controls="pane-3">
+              <span class="icon is-small"><span aria-hidden="true" class="fab fa-superpowers"></span></span>
+              <span>Team</span>
+            </button>
+            <button id="4" role="tab" tabindex="-1" aria-controls="pane-4">
+              <span class="icon is-small"><span aria-hidden="true" class="fa fa-film"></span></span>
+              <span>Video</span>
+            </button>
+          </div>
         </div>
       </div>
     
       <div class="tab-content container">
-        <div class="tab-pane is-active" id="pane-1" class="level" role="tabpanel">
+        <div id="pane-1" role="tabpanel">
           <div class="container">
             <div class="columns features">
               <div class="column is-4">
@@ -371,7 +365,7 @@
           </div>
         </div>
     
-        <div class="tab-pane" id="pane-3" role="tabpanel">
+        <div id="pane-3" role="tabpanel" hidden="">
           <div class="columns medias">
             <div class="column">
               <div class="media">
@@ -432,7 +426,7 @@
           </div>
         </div>
     
-        <div class="tab-pane" id="pane-4" role="tabpanel">
+        <div id="pane-4" role="tabpanel" hidden="">
           <div class="columns is-centered">
             <div class="column is-three-quarters">
               <h3 class="title has-text-centered">Inspired video</h3>
